@@ -1,6 +1,14 @@
-# Solidity Template
+# Euro
 
-My favourite setup for writing Solidity smart contracts.
+Initial Draft of a Token that:
+- Tracks the Price of Euro / USDC
+- Keeps peg with USDC by using Chainlink
+- Get's interest by using Compound
+
+
+# From: Solidity Template
+
+A lot of grat stuff, I don't fully understand
 
 - [Hardhat](https://github.com/nomiclabs/hardhat): compile and run the smart contracts on a local development network
 - [TypeChain](https://github.com/ethereum-ts/TypeChain): generate TypeScript types for smart contracts
