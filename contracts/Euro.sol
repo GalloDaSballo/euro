@@ -13,11 +13,20 @@ contract Euro is ERC20 {
     token = _tokenAddress;
   }
 
-  function mint(address account, uint256 amount) public {
-    console.log("Minted ", amount);
-    console.log("To ", account);
-    
+  /** 
+   * Given an amount, 
+   * takes amount tokens, (from msg.sender)
+   * mints amount cTokens (for contract)
+   * mints (and returns) amount euro (to msg.sender)
+   */
+  function mint(uint256 amount) public {    
+    console.log("In Token Mint");
+    console.log("amount");
+    console.log(amount);
+
     token.transferFrom(msg.sender, address(this), amount); //Now they send USDC to this contract    
+    console.log("Transfered to Euro");
+
 		// USDC is held by Euro contract
     
     // Approve transfer on the ERC20 contract
@@ -29,6 +38,21 @@ contract Euro is ERC20 {
 
     // USDC is held by compound, Euro contract holds cUSDC
   
-    _mint(account, amount); //
+    _mint(msg.sender, amount); //
+  }
+
+  /**
+   * TODO
+   */
+  function burn(uint amount) public {
+    console.log("In Token burn");
+    console.log("amount");
+    console.log(amount);
+
+    console.log("TODO");
+    //Burn cToken, keep interest here
+
+    //Send back amount token
+
   }
 }
