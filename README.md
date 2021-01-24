@@ -5,6 +5,8 @@ Initial Draft of a Token that:
 - Keeps peg with USDC by using Chainlink
 - Get's interest by using Compound
 
+## Template
+From https://github.com/paulrberg/solidity-template
 
 # From: Solidity Template
 
